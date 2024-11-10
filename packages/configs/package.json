@@ -1,0 +1,21 @@
+{
+  "name": "configs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^2.10.1",
+    "stylelint": "^16.10.0",
+    "typescript": "~5.6.2"
+  },
+  "exports": {
+    "./*": "./*.js"
+  }
+}
