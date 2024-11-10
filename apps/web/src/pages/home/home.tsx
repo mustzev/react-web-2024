@@ -1,10 +1,10 @@
-import styles from './home.module.css'
+import './home.css'
 
 export function Home() {
   return (
-    <div className={styles['home-page']}>
+    <div className="home-page">
       home page
-      <p className={styles['red-text']}>
+      <p className="red-text">
         red text
       </p>
     </div>

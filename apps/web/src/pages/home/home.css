@@ -1,0 +1,10 @@
+@scope (.home-page) {
+  :scope {
+    background-color: bisque;
+
+    .red-text {
+      color: red;
+      gap: 12;
+    }
+  }
+}
