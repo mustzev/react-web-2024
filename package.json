@@ -8,6 +8,7 @@
     "dev": "pnpm --filter web dev",
     "build": "pnpm --filter web build",
     "lint": "pnpm --filter web lint",
+    "stylelint": "pnpm --filter web stylelint",
     "preview": "pnpm --filter web preview",
     "storybook": "pnpm --filter ui storybook",
     "build-storybook": "pnpm --filter ui build-storybook",

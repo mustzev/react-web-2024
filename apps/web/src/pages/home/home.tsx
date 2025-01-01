@@ -7,6 +7,12 @@ export function Home() {
       <p className="red-text">
         red text
       </p>
+      <button>
+        modal
+      </button>
+      <button>
+        notification
+      </button>
     </div>
   )
 }

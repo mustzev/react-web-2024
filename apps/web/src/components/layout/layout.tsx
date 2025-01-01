@@ -1,9 +1,18 @@
+import { ReactNode } from 'react'
 import './layout.css'
+import Sidebar from './sidebar/sidebar'
 
-export function Layout() {
+type LayoutProps = {
+  children: ReactNode
+}
+
+export function Layout({ children }: LayoutProps) {
   return (
-    <div className="">
-
+    <div className="layout">
+      <Sidebar />
+      <div className="page-container">
+        {children}
+      </div>
     </div>
   )
 }
