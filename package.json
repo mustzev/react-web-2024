@@ -10,9 +10,13 @@
     "lint": "pnpm --filter web lint",
     "preview": "pnpm --filter web preview",
     "storybook": "pnpm --filter ui storybook",
-    "build-storybook": "pnpm --filter ui build-storybook"
+    "build-storybook": "pnpm --filter ui build-storybook",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
 }
