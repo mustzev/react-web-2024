@@ -8,5 +8,5 @@ export function useKeyPress(key: string, action: () => void) {
   useEffect(() => {
     window.addEventListener('keydown', keyDown)
     return () => window.removeEventListener('keydown', keyDown)
-  }, [])
+  })
 }
