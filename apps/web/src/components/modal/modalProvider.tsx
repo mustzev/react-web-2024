@@ -3,9 +3,9 @@ import './modalProvider.css'
 import { useModal } from './modalStore'
 
 export function ModalProvider() {
-  const modals = useModal(state => state.modals)
+  const { modals, closeTheLatest } = useModal(state => state)
 
-  useKeyPress('Escape', () => { })
+  useKeyPress('Escape', closeTheLatest)
 
   return modals.map(modal => (
     <div className="modal-background" style={{ zIndex: modal.zIndex }}>

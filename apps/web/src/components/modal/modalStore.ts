@@ -9,7 +9,8 @@ type Modal = {
 type ModalState = {
   modals: Modal[]
   open: (content: ReactNode) => void
-  close: () => void
+  close: (zIndex: number) => void
+  closeTheLatest: () => void
 }
 
 const initialZIndex = 1000
@@ -31,5 +32,15 @@ export const useModal = create<ModalState>((set, get) => ({
       }],
     })
   },
-  close: () => { },
+  close: (zIndex) => {
+    const modals = get().modals
+    set({ modals: modals.filter(modal => modal.zIndex !== zIndex) })
+  },
+  closeTheLatest: () => {
+    const modals = get().modals
+    const lastModal = modals.at(-1)
+    if (lastModal !== undefined) {
+      set({ modals: modals.filter(modal => modal.zIndex !== lastModal.zIndex) })
+    }
+  },
 }))
